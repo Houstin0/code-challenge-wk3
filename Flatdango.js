@@ -41,16 +41,10 @@ fetch("http://localhost:3000/films")
       const listItem = document.createElement('li');
       listItem.className = 'movie-item';
       listItem.textContent = movie.title;
-      listItem.addEventListener('click', handleFilmSelection);
+      listItem.dataset.filmId=movie.id
+      listItem.addEventListener('click', (event) =>{updateDetails(movie)}) //event listener for the list
       filmsList.appendChild(listItem);
 
     })
 })
-
-function handleFilmSelection(event) {
-    const filmId = event.target.dataset.filmId;
-    const selectedFilm = films.find(film => film.id === filmId);
-    updateDetails(selectedFilm);
-}
-
 
