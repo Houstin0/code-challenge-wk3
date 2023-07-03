@@ -1,0 +1,27 @@
+body{
+    background-color: darkgrey;
+    margin: 10px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    
+}
+.movieDetails{
+    text-align: center;
+}
+.movie-item{
+    background-color: lightgray;
+}
+img{
+    max-width: 60%;
+}
+li.movie-item{
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}
+button{
+    background-color: lightgreen;
+}
