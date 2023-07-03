@@ -24,14 +24,19 @@ function updateDetails(movie) {
     availableTicketsElement.textContent=`Available Tickets:${movie.capacity-movie.tickets_sold}`
     const buyButton=document.getElementById("buyButton")
   
-    if(movie.capacity-movie.tickets_sold===0){
-        buyButton.disabled= true
-    }else{
-        buyButton.disabled=false
-    }
+
+     //event listener for the buy ticket button decreases the number of available tickets 
+    buyButton.addEventListener('click',()=>{
+       if(movie.capacity-movie.tickets_sold>0){
+        movie.tickets_sold++;
+        availableTicketsElement.textContent=`Available Tickets:${movie.capacity-movie.tickets_sold}`
+       }else{
+        buyButton.disabled=true//disables button when there are no more tickets
+       }
+    })
 
 }
-
+//fetching data and creating a list menu
 fetch("http://localhost:3000/films")
   .then(response => response.json())
   .then(data => {
