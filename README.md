@@ -1,8 +1,7 @@
 # code-challenge-wk3
 ## Title: Flatdango
 ## Description:
-Flatdango is an application that allows a user to view and purchase movie tickets from the
-theater.
+Flatdango is an application that allows a user to view a movie and can choose from a list of movies which movie they want and can purchase the movie ticket for that movie by clicking the buy ticket button.
 ## Project Setup:
 To set up the project, follow these steps:
 1.Clone the repository to your local machine.
